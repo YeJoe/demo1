@@ -501,7 +501,8 @@ body {
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
 <a href="folder://">
  
-<img class="smaller" src="img/google12345.gif" width=33% ></img>
+<img class="smaller"
+ src="img/google12345.gif" width=33% ></img>
 </a>
 <form id="search_form" onsubmit="return search()" class="search_bar">
 <input type="submit" id="search_submit" value="Get..." >
@@ -671,7 +672,7 @@ function clear_seach() {
 	input.focus();
 }
 function search(){if(document.getElementById("search_input").value != ""){
-window.location.href = "http://m.mijisou.com/search?q=ie=utf-8&rn=30&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1";
+window.location.href = "http://m.mijisou.com/search?q=%s&ie=utf-8&rn=30&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1";
 document.getElementById("search_input").value = "";}return false;}
 
 document.getElementById('suglist').addEventListener('click', function(e) {
