@@ -1,12 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="en-us" http-equiv="Content-Language" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta name="viewport" content="width=device-width, initial-scale=0.9">
 <title id="title">  
-
+Via_Joe..
 </title>
+
+<script charset="gbk" src="http://mijisou.com/js/opensug.js"></script>
+
+<script type="text/javascript">
+var d = new Date()
+var time = d.getHours()
+if (time < 24)
+{
+document.getElementById("title").innerHTML="Good evening";
+}
+if (time < 19) 
+{
+document.getElementById("title").innerHTML="Good afternoon";
+}
+if (time < 12) 
+{
+document.getElementById("title").innerHTML="Good morning";
+}
+if (time < 5)
+{
+document.getElementById("title").innerHTML="Dalao hello";
+}
+</script>
+
+
+
 </head>
 <style>
 
@@ -80,13 +106,23 @@ ajax.onreadystatechange=function()
 背景色︰ #f1f6ee  使用夜间默认时修改为#000000即可
 }
 */
+
+html,body{height: 100%;width: 100%;margin:0;padding:0;}
+
 body {
 	text-align: center;
-    background-image:url('img/Starbucks.jpg') !important;
+    background-image:url('img/123.jpg') !important;
+
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+    position:absolute;
+
  /*可换上面的图片地址*/
-    background-size: 100% !important;
+    //background-size: 100% !important;
     background-repeat: no-repeat;
  	background-color: #ffffff;
+	
   /*可删上面的固定句语*/
 }
 
@@ -109,7 +145,7 @@ body {
 #search_input {
 	width: 90%;
 	height: 40px;
-	background-color: transparent;
+	//background-color: transparent;
 	border: none;
 	outline: 0;
 	font-size: 16px;
@@ -495,6 +531,7 @@ body {
 
 <body>
 
+
 <div id="content">
 <br />
 <div class="search_part">
@@ -562,7 +599,7 @@ body {
 <br>
 <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
-<!--<div id="yiyan" style="
+<div id="yiyan" style="
 width: 500px;
 background-color:rgba(255, 255, 255, 0);
 ">
@@ -591,6 +628,8 @@ else{
     var ran=hit[count];
    var text=ran.hitokoto;
    var author=ran.source;
+
+
    /*var ajax = new XMLHttpRequest();
 ajax.onreadystatechange=function()
   {
@@ -608,10 +647,13 @@ ajax.onreadystatechange=function()
   ajax.open('GET','customHitokotoB.json', true);
   ajax.send();
   */
+
+
+
    document.getElementById("yiyan").innerHTML="<br />"+text+"<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——"+author;
 }
 </script>
-<br>-->
+
 
 
 
